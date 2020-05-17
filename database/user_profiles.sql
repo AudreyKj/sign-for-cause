@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS user_profiles;
+
 
 CREATE TABLE user_profiles(
     id SERIAL PRIMARY KEY,

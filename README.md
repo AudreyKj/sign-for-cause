@@ -3,17 +3,20 @@
 In this app, users can register/login, create a profile, sign for a cause and discover the full list
 of signers. <br />
 
-The homepage features a customizable design, as users can change its background color.
+The homepage features a customizable design where users can change its background color.
 
 [visit live app](https://sign-for-cause.herokuapp.com/)
 
 ## Features
 
+-   change background-color of page
 -   login/register
--   create a profile
+-   create & update profile
 -   sign (using canvas)
 -   see list of signers
 -   filter signers by city
+-   delete signature
+-   logout
 
 ## Tech
 
@@ -26,6 +29,7 @@ The homepage features a customizable design, as users can change its background 
 
 ![screenshot](screenshot_2.png)
 ![screenshot](screenshot_1.png)
+![screenshot](screenshot_3.png)
 
 <p align="center">
 <img width="300" height="550" src="mobile.png">
