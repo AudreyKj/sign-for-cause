@@ -1,0 +1,24 @@
+
+<section class="thankyou">
+
+<span class="tankyou-message">  THANK YOU FOR BEING PART OF OUR COMMUNITY!  <br> <br>
+  here is your signature: </span>
+
+<img src="{{signature}}" alt="signature">
+
+<div class="options-thankyou">
+
+<button class="button-thankyoupage"><a class="thankyoupage" href='/signers'>  SEE YOUR FELLOW SIGNERS </a> </button>
+
+<button class="button-thankyoupage"><a class="thankyoupage" href='/profile/edit'> EDIT YOUR PROFILE </a> </button>
+
+<form class="delete_signature" action="/thankyou/delete_signature/" method="post">
+  <button class="button-thankyoupage">
+    DELETE YOUR SIGNATURE
+  </button>
+<input type="hidden" name="_csrf" value="{{csrfToken}}">
+</form>
+
+</div>
+
+</section>

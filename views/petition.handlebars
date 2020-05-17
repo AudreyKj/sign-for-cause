@@ -1,0 +1,46 @@
+<section class="petition">
+  <div class="color">
+    <span class="color-text"> change <br> color </span>
+  <input class="input-color" type="color">
+  </div>
+
+
+<section class="register">
+<span class="login"> PLEASE REGISTER </span>
+{{#if error}}
+<span class="error">oops! something went wrong. Please try again! </div>
+{{/if}}
+
+    <form  class="register" method="POST">
+      <label for="first"> FIRST NAME</label>
+      <input type="text" name="first" minlength="2" placeholder="first name" autocomplete="off" required>
+      <label for="last"> LAST NAME</label>
+      <input type="text" name="last" placeholder="last name" minlength="2" autocomplete="off" required>
+      <label for="email"> EMAIL </label>
+      <input type="text" name="email" minlength="4" placeholder="email" autocomplete="off" required>
+      <label for="last"> PASSWORD </label>
+      <input type="password" name="password" placeholder="password" minlength="2" autocomplete="off"required>
+      <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+
+<button class="button auth-page"> SIGN UP  </button>
+
+
+</form>
+
+
+<span class="link-login-register"> IF YOU ARE ALREADY A MEMBER, PLEASE <a class="link" href="/login"> LOGIN </a></span>
+
+</section>
+
+{{#if loggedIn}}
+<a class="button edit-profile-home" href="/profile/edit"> YOUR PROFILE </a>
+<form action="/logout" method="post">
+  <button class="button logout">
+    LOGOUT
+  </button>
+<input type="hidden" name="_csrf" value="{{csrfToken}}">
+</form>
+{{/if}}
+
+</section>

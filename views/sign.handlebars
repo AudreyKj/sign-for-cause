@@ -1,0 +1,24 @@
+<section class="signing">
+
+  <span class="sign"> YOU HAVEN'T SIGNED YET </span>
+
+<form class="sign" method="POST">
+CHOOSE A COLOR FOR YOUR SIGNATURE AND SIGN BELOW
+
+<div class="color-signature">
+<input id="signature-color" type="color" />
+
+</div>
+
+<input type="hidden" name="signature" id="signature"/>
+<div class="canvas"><canvas id="signature" width="400" height="100"><canvas></div>
+<input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+<button class="button-thankyoupage"> SUBMIT </button>
+
+</form>
+
+
+</section>
+
+<script src="../script.js"></script>

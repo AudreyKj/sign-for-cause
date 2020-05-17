@@ -1,0 +1,39 @@
+<section>
+
+<form  class="update" method="POST">
+
+  <span class="update"> EDIT YOUR PROFILE  </span>
+  {{#if error}}
+  <span class="error"> Error: please make sure the fields are filled in correctly! </span>
+  {{/if}}
+
+  <label for="first"> FIRST NAME</label>
+  <input type="text" name="first" minlength="2" value="{{first}}" autocomplete="off">
+
+  <label for="last"> LAST NAME</label>
+  <input type="text" name="last" value="{{last}}" minlength="2" autocomplete="off">
+
+  <label for="email"> EMAIL </label>
+  <input type="text" name="email" minlength="4" value="{{email}}" autocomplete="off">
+
+  <label for="password"> PASSWORD </label>
+  <input type="password" name="password" value="{{password}}" minlength="2" autocomplete="off" required>
+
+  <label for="age"> AGE </label>
+  <input type="text" name="age" minlength="2" value="{{age}}" autocomplete="off">
+
+  <label for="city"> CITY </label>
+  <input type="text" name="city" value="{{city}}" minlength="2" autocomplete="off">
+
+  <label for="website"> WEBSITE OR SOCIAL MEDIA  <br> link starts with "http://" or "https://"
+  </label>
+  <input type="text" name="website" minlength="4" value="{{website}}"
+  autocomplete="off">
+
+  <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+<button class="button-thankyoupage"> UPDATE</button>
+
+</form>
+
+</section>

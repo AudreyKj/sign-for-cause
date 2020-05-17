@@ -1,0 +1,24 @@
+<section class="login">
+  <div class="color">
+    <span class="color-text"> change <br> color </span>
+  <input class="input-color" type="color">
+  </div>
+  <span class="login"> PLEASE LOGIN </span>
+
+  {{#if error}}
+  <span class="error">Error: authentification failed!</span>
+  {{/if}}
+
+  <form  class="login" method="POST">
+    <label for="email"> EMAIL </label>
+    <input type="text" name="email" minlength="4" placeholder="email" autocomplete="off" required>
+    <label for="last"> PASSWORD </label>
+    <input type="password" name="password" placeholder="password" minlength="2" autocomplete="off" required>
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <button class="button auth-page"> LOGIN  </button>
+</form>
+
+<span class="link-login-register"> IF YOU ARE NOT A MEMBER, PLEASE <a class="link" href="/petition">
+  REGISTER </a></span>
+
+</section>

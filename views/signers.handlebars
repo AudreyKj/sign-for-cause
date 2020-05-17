@@ -1,0 +1,43 @@
+<section class="signers">
+
+  <span class="signers"> LIST OF SIGNERS</span>
+
+
+<ul>
+{{#signers}}
+
+
+{{#if website}}
+<li> <a class="link" href="{{website}}" target="_blank"> {{first}}&nbsp;&nbsp;{{last}}</a>
+    {{age}}&nbsp;&nbsp; <a class="link" href="/signers/{{city}}">{{city}}</a>
+    {{favorite_hour}}
+
+    {{else}}
+
+    <li> {{first}}&nbsp;&nbsp;{{last}}
+       {{age}}&nbsp;&nbsp; <a class="link" href="/signers/{{city}}">{{city}}</a>
+      {{favorite_hour}}
+    </li>
+{{/if}}
+
+
+
+{{/signers}}
+</ul>
+
+
+<div class="options-signers">
+
+<button class="button-thankyoupage"><a class="thankyoupage" href='/profile/edit'> EDIT YOUR PROFILE </a> </button>
+
+<form class="delete_signature" action="/logout" method="post">
+  <button class="button-thankyoupage">
+    LOGOUT
+  </button>
+<input type="hidden" name="_csrf" value="{{csrfToken}}">
+</form>
+
+
+</div>
+
+</section>
