@@ -218,7 +218,7 @@ button {
     outline: none;
 }
 
-/* HOMEPAGE - PETITION */
+/* HOMEPAGE  */
 section.petition {
     overflow: hidden;
     display: flex;
@@ -232,14 +232,6 @@ section.petition {
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
-}
-
-/* canvas for three.js shape*/
-section#shape {
-    min-height: 100vh;
-    position: absolute;
-    top: 0;
-    opacity: 0.7;
 }
 
 .auth-left {
@@ -265,12 +257,6 @@ div.auth-buttons {
     top: 20%;
     display: flex;
     justify-content: center;
-}
-
-/* button and link common to both login and register pages */
-button.button.auth-page {
-    margin-top: 15px;
-    margin-bottom: 25px;
 }
 
 span.link-login-register {
