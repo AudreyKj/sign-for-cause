@@ -32,5 +32,5 @@ The homepage features a customizable design where users can change its backgroun
 ![screenshot](screenshot_3.png)
 
 <p align="center">
-<img width="300" height="550" src="mobile.png">
+<img src="mobile.png">
 </p>
