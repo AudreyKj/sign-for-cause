@@ -88,6 +88,35 @@ document.addEventListener("touchend", function() {
     context.closePath();
 });
 
+//prevent scroll on touch
+document.body.addEventListener(
+    "touchstart",
+    function(e) {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
+    },
+    false
+);
+document.body.addEventListener(
+    "touchend",
+    function(e) {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
+    },
+    false
+);
+document.body.addEventListener(
+    "touchmove",
+    function(e) {
+        if (e.target == canvas) {
+            e.preventDefault();
+        }
+    },
+    false
+);
+
 function drawline(x2, y2) {
     context.lineTo(x2, y2);
     context.stroke();

@@ -12,6 +12,7 @@ body {
     font-family: Arial;
     color: #cccccc;
     transition: background-color 0.6s;
+    -webkit-overflow-scrolling: auto;
 }
 
 input#signature-color {
