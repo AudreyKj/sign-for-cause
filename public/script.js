@@ -52,6 +52,42 @@ document.addEventListener("mouseup", function() {
     context.closePath();
 });
 
+//responsive
+canvas.addEventListener("touchstart", function(e) {
+    x = e.offsetX;
+    y = e.offsetY;
+    console.log("x", x);
+    console.log("y", y);
+    console.log("e.offsetX", e.offsetX);
+    console.log("e.offsetY", e.offsetY);
+    drawing = true;
+    context.beginPath();
+    context.moveTo(x, y);
+});
+
+canvas.addEventListener("touchmove", function(e) {
+    console.log("x2", x2);
+    console.log("y2", y2);
+    x2 = e.offsetX;
+    y2 = e.offsetY;
+
+    if (drawing === true) {
+        console.log("canvas offsetLeft", canvas.offsetLeft);
+        console.log("canvas offsetTop", canvas.offsetTop);
+        drawline(x2, y2);
+    }
+});
+
+document.addEventListener("touchend", function() {
+    drawing = false;
+
+    let dataURL = canvas.toDataURL("image/png", 1.0);
+    document.getElementById("signature").value = dataURL;
+    //$("input#sign").val($("canvas")[0].toDataurl());
+    console.log("data URL", dataURL);
+    context.closePath();
+});
+
 function drawline(x2, y2) {
     context.lineTo(x2, y2);
     context.stroke();
