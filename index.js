@@ -326,7 +326,7 @@ app.get("/profile/updated", function(req, res) {
 //////////////// THANK YOU ////////
 //////////////////////////////////
 
-app.get("/thankyou", requireSignature, function(req, res) {
+app.get("/thankyou", function(req, res) {
     db.getSignature(req.session.userId)
         .then(result => {
             req.session.signatureID = result.rows[0].id;

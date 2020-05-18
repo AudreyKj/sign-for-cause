@@ -1,4 +1,5 @@
 let canvas = document.querySelector("canvas");
+console.log(canvas);
 let colorInput = document.getElementById("signature-color");
 
 colorInput.addEventListener("input", function() {
@@ -59,7 +60,7 @@ canvas.addEventListener("touchmove", function(e) {
     }
 });
 
-canvas.addEventListener("touchend", function() {
+document.addEventListener("touchend", function() {
     drawing = false;
 
     let dataURL = canvas.toDataURL("image/png", 1.0);
