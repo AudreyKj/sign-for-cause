@@ -51,14 +51,15 @@ document.addEventListener("mouseup", function() {
 canvas.addEventListener("touchstart", function(e) {
     e.preventDefault();
     drawing = true;
-    context.moveTo(e.pageX, e.pageY);
+
+    context.moveTo(e.touches[0].clientX, e.touches[0].clientY);
     context.beginPath();
 });
 
 canvas.addEventListener("touchmove", function(e) {
     e.preventDefault();
     if (drawing === true) {
-        drawline(e.pageX, e.pageY);
+        drawline(e.touches[0].clientX, e.touches[0].clientY);
     }
 });
 
