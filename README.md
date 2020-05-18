@@ -27,9 +27,9 @@ The homepage features a customizable design where users can change its backgroun
 
 ## Visuals
 
-![screenshot](screenshot_2.png)
-![screenshot](screenshot_1.png)
-![screenshot](screenshot_3.png)
+![screenshot](readMe/screenshot_2.png)
+![screenshot](readMe/screenshot_1.png)
+![screenshot](readMe/screenshot_3.png)
 
 <p align="center">
 <img src="mobile.png" width="400" height="570">
