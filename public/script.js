@@ -49,9 +49,10 @@ document.addEventListener("mouseup", function() {
 
 //mobile
 canvas.addEventListener("touchstart", function(e) {
-    e.preventDefault();
+    //e.preventDefault();
     drawing = true;
 
+    console.log(context);
     context.moveTo(e.touches[0].clientX, e.touches[0].clientY);
     console.log("e.touches[0].clientX", e.touches[0].clientX);
     console.log("e.touches[0].clientY", e.touches[0].clientY);
