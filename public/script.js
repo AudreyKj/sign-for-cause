@@ -48,33 +48,22 @@ document.addEventListener("mouseup", function() {
 });
 
 //mobile
-
-function preventDefault(e) {
-    e.preventDefault();
-}
-function disableScroll() {
-    document.body.addEventListener("touchmove", preventDefault, {
-        passive: false
-    });
-}
-function enableScroll() {
-    document.body.removeEventListener("touchmove", preventDefault);
-}
-
 canvas.addEventListener("touchstart", function(e) {
+    e.preventDefault();
     drawing = true;
     context.moveTo(e.pageX, e.pageY);
     context.beginPath();
-    disableScroll();
 });
 
 canvas.addEventListener("touchmove", function(e) {
+    e.preventDefault();
     if (drawing === true) {
         drawline(e.pageX, e.pageY);
     }
 });
 
 canvas.addEventListener("touchend", function() {
+    e.preventDefault();
     drawing = false;
 
     let dataURL = canvas.toDataURL("image/png", 1.0);
