@@ -15,8 +15,6 @@ body {
     background-repeat: no-repeat;
     font-family: Arial;
     color: #cccccc;
-    position: fixed;
-    overflow: hidden;
 }
 
 input#signature-color {
