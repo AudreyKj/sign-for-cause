@@ -1,5 +1,5 @@
 let canvas = document.querySelector("canvas#signature");
-console.log(canvas);
+
 let colorInput = document.getElementById("signature-color");
 
 colorInput.addEventListener("input", function() {
@@ -63,7 +63,7 @@ canvas.addEventListener("touchmove", function(e) {
     }
 });
 
-canvas.addEventListener("touchend", function() {
+canvas.addEventListener("touchend", function(e) {
     e.preventDefault();
     drawing = false;
 
