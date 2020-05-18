@@ -71,6 +71,4 @@ canvas.addEventListener("touchend", function(e) {
     document.getElementById("signature").value = dataURL;
 
     context.closePath();
-
-    enableScroll();
 });
