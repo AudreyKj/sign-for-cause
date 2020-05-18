@@ -14,6 +14,7 @@ let y2 = 0;
 
 let context = canvas.getContext("2d");
 context.lineWidth = 1.5;
+context.lineCap = "round";
 
 function drawline(x2, y2) {
     context.lineTo(x2, y2);
@@ -49,24 +50,23 @@ document.addEventListener("mouseup", function() {
 
 //mobile
 canvas.addEventListener("touchstart", function(e) {
-    //e.preventDefault();
+    e.preventDefault();
     drawing = true;
+    context.moveTo(e.touches[0].clientX, e.touches[0].clientY);
+    context.beginPath();
 
     console.log(context);
-    context.moveTo(e.touches[0].clientX, e.touches[0].clientY);
-    console.log("e.touches[0].clientX", e.touches[0].clientX);
-    console.log("e.touches[0].clientY", e.touches[0].clientY);
-    context.beginPath();
 });
 
 canvas.addEventListener("touchmove", function(e) {
     e.preventDefault();
     if (drawing === true) {
-        drawline(e.touches[0].clientX, e.touches[0].clientY);
+        context.lineTo(e.touches.clientX, e.touches.clientY);
+        context.stroke();
     }
 });
 
-canvas.addEventListener("touchend", function(e) {
+document.addEventListener("touchend", function(e) {
     e.preventDefault();
     drawing = false;
 
