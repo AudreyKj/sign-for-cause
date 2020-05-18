@@ -237,7 +237,9 @@ app.post("/profile", (req, res) => {
         })
         .catch(err => {
             console.log("error", err);
-            res.redirect("/sign");
+            res.render("profile", {
+                error: "error"
+            });
         });
 });
 

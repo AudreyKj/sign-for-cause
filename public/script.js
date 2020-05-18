@@ -12,7 +12,12 @@ let x2 = 0;
 let y2 = 0;
 
 let context = canvas.getContext("2d");
-context.lineWidth = 0.5;
+context.lineWidth = 1.5;
+
+function drawline(x2, y2) {
+    context.lineTo(x2, y2);
+    context.stroke();
+}
 
 canvas.addEventListener("mousedown", function(e) {
     x = e.offsetX;
@@ -41,29 +46,20 @@ document.addEventListener("mouseup", function() {
     context.closePath();
 });
 
-//responsive
+//mobile
 canvas.addEventListener("touchstart", function(e) {
-    e.preventDefault();
-    x = e.offsetX;
-    y = e.offsetY;
-
     drawing = true;
+    context.moveTo(e.pageX, e.pageY);
     context.beginPath();
-    context.moveTo(x, y);
 });
 
 canvas.addEventListener("touchmove", function(e) {
-    e.preventDefault();
-    x2 = e.offsetX;
-    y2 = e.offsetY;
-
     if (drawing === true) {
-        drawline(x2, y2);
+        drawline(e.pageX, e.pageY);
     }
 });
 
-document.addEventListener("touchend", function() {
-    e.preventDefault();
+canvas.addEventListener("touchend", function() {
     drawing = false;
 
     let dataURL = canvas.toDataURL("image/png", 1.0);
@@ -71,8 +67,3 @@ document.addEventListener("touchend", function() {
 
     context.closePath();
 });
-
-function drawline(x2, y2) {
-    context.lineTo(x2, y2);
-    context.stroke();
-}

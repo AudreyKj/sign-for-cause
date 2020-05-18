@@ -72,7 +72,7 @@ span.color-text {
     position: absolute;
 }
 
-/* ELEMENTS COMMON TO DIFFERENT PAGES */
+/* GENERAL */
 section {
     min-height: 100vh;
 }
@@ -100,6 +100,12 @@ h1 {
     padding-top: 35px;
     color: transparent;
     -webkit-text-stroke: 1px #ffffffa1;
+    transition: color 0.5s;
+}
+
+h1:hover {
+    color: #ffffffa1;
+    -webkit-text-stroke: 1px transparent;
 }
 
 h1.light {
@@ -344,6 +350,8 @@ canvas#signature {
     box-shadow: 0px 0px 15px 15px rgba(255, 255, 255, 0.7);
     margin-bottom: 35px;
     margin-top: 30px;
+
+    cursor: crosshair;
 }
 
 div.color-signature {

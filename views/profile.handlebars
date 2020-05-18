@@ -1,6 +1,8 @@
 <section class="profile">
   <span class="login"> PROFILE</span>
-
+  {{#if error}}
+  <span class="error"> Error: please make sure the fields are filled in correctly! </span>
+  {{/if}}
 
     <form  class="profile" method="POST">
       <label for="age"> AGE </label>
