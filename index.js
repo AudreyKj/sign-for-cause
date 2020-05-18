@@ -68,7 +68,7 @@ app.get("/", (req, res) => {
 //////////////// AUTH ROUTES ////////
 //////////////////////////////////
 
-app.post("/petition", requireLoggedOutUser, (req, res) => {
+app.post("/petition", (req, res) => {
     let first = req.body.first;
     let last = req.body.last;
     let email = req.body.email;

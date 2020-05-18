@@ -16,8 +16,9 @@ body {
     font-family: Arial;
     color: #cccccc;
     position: fixed;
+    overflow: hidden;
 
-    transition: background-color 0.6s;
+    /* transition: background-color 0.6s; */
 }
 
 input#signature-color {
