@@ -60,13 +60,13 @@ canvas.addEventListener("touchstart", function(e) {
 
 canvas.addEventListener("touchmove", function(e) {
     e.preventDefault();
-    if (drawing === true) {
-        context.lineTo(e.touches.clientX, e.touches.clientY);
+    if (drawing == true) {
+        context.lineTo(e.touches[0].clientX, e.touches[0].clientY);
         context.stroke();
     }
 });
 
-document.addEventListener("touchend", function(e) {
+canvas.addEventListener("touchend", function(e) {
     e.preventDefault();
     drawing = false;
 
