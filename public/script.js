@@ -53,6 +53,8 @@ canvas.addEventListener("touchstart", function(e) {
     drawing = true;
 
     context.moveTo(e.touches[0].clientX, e.touches[0].clientY);
+    console.log("e.touches[0].clientX", e.touches[0].clientX);
+    console.log("e.touches[0].clientY", e.touches[0].clientY);
     context.beginPath();
 });
 
