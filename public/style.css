@@ -307,6 +307,17 @@ section.profile {
     flex-direction: column;
 }
 
+div.profile-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input.profile-edit {
+    margin-right: 15px;
+    margin-left: 5px;
+}
+
 form.profile {
     padding-top: 30px;
     text-align: center;

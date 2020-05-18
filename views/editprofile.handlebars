@@ -7,23 +7,29 @@
   <span class="error"> Error: please make sure the fields are filled in correctly! </span>
   {{/if}}
 
+<div class="profile-inputs">
   <label for="first"> FIRST NAME</label>
-  <input type="text" name="first" minlength="2" value="{{first}}" autocomplete="off">
+  <input class="profile-edit" type="text" name="first" minlength="2" value="{{first}}" autocomplete="off">
 
   <label for="last"> LAST NAME</label>
-  <input type="text" name="last" value="{{last}}" minlength="2" autocomplete="off">
+  <input class="profile-edit" type="text" name="last" value="{{last}}" minlength="2" autocomplete="off">
+</div>
 
+<div class="profile-inputs">
   <label for="email"> EMAIL </label>
-  <input type="text" name="email" minlength="4" value="{{email}}" autocomplete="off">
+  <input class="profile-edit" type="text" name="email" minlength="4" value="{{email}}" autocomplete="off">
 
   <label for="password"> PASSWORD </label>
-  <input type="password" name="password" value="{{password}}" minlength="2" autocomplete="off" required>
+  <input class="profile-edit" type="password" name="password" value="{{password}}" minlength="2" autocomplete="off" required>
+</div>
 
+<div class="profile-inputs">
   <label for="age"> AGE </label>
-  <input type="text" name="age" minlength="2" value="{{age}}" autocomplete="off">
+  <input class="profile-edit" type="text" name="age" minlength="2" value="{{age}}" autocomplete="off">
 
   <label for="city"> CITY </label>
-  <input type="text" name="city" value="{{city}}" minlength="2" autocomplete="off">
+  <input class="profile-edit" type="text" name="city" value="{{city}}" minlength="2" autocomplete="off">
+</div>
 
   <label for="website"> WEBSITE OR SOCIAL MEDIA  <br> link starts with "http://" or "https://"
   </label>

@@ -158,7 +158,7 @@ app.get("/sign", requireNoSignature, (req, res) => {
     });
 });
 
-app.post("/sign", requireNoSignature, (req, res) => {
+app.post("/sign", (req, res) => {
     let signature = req.body.signature;
     let user_id = req.session.userId;
 

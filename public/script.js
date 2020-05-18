@@ -1,4 +1,4 @@
-let canvas = document.querySelector("canvas");
+let canvas = document.querySelector("canvas#signature");
 console.log(canvas);
 let colorInput = document.getElementById("signature-color");
 
@@ -48,10 +48,24 @@ document.addEventListener("mouseup", function() {
 });
 
 //mobile
+
+function preventDefault(e) {
+    e.preventDefault();
+}
+function disableScroll() {
+    document.body.addEventListener("touchmove", preventDefault, {
+        passive: false
+    });
+}
+function enableScroll() {
+    document.body.removeEventListener("touchmove", preventDefault);
+}
+
 canvas.addEventListener("touchstart", function(e) {
     drawing = true;
     context.moveTo(e.pageX, e.pageY);
     context.beginPath();
+    disableScroll();
 });
 
 canvas.addEventListener("touchmove", function(e) {
@@ -60,11 +74,13 @@ canvas.addEventListener("touchmove", function(e) {
     }
 });
 
-document.addEventListener("touchend", function() {
+canvas.addEventListener("touchend", function() {
     drawing = false;
 
     let dataURL = canvas.toDataURL("image/png", 1.0);
     document.getElementById("signature").value = dataURL;
 
     context.closePath();
+
+    enableScroll();
 });
