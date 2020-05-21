@@ -50,6 +50,7 @@ document.addEventListener("mouseup", function() {
 
 //mobile
 canvas.addEventListener("touchstart", function(e) {
+    e.preventDefault();
     console.log("event.pageX", event.pageX);
     console.log("event.pageY", event.pageY);
     drawing = true;
