@@ -1,4 +1,3 @@
-
 CREATE TABLE user_profiles(
     id SERIAL PRIMARY KEY,
     age INT,

@@ -1,4 +1,3 @@
-
 CREATE TABLE signatures(
       id SERIAL PRIMARY KEY,
       signature TEXT NOT NULL,
