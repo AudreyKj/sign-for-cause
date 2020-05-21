@@ -50,17 +50,20 @@ document.addEventListener("mouseup", function() {
 
 //mobile
 canvas.addEventListener("touchstart", function(e) {
+    console.log("event.pageX", event.pageX);
+    console.log("event.pageY", event.pageY);
     drawing = true;
-    context.moveTo(e.touches[0].clientX, e.touches[0].clientY);
+    context.moveTo(event.pageX, event.pageY);
     context.beginPath();
-
-    console.log(context);
 });
 
 canvas.addEventListener("touchmove", function(e) {
     if (drawing == true) {
-        context.lineTo(e.touches[0].clientX, e.touches[0].clientY);
+        //context.lineTo(e.touches[0].clientX, e.touches[0].clientY);
+        context.lineTo(event.pageX, event.pageY);
         context.stroke();
+        console.log("event.pageX", event.pageX);
+        console.log("event.pageY", event.pageY);
     }
 });
 
@@ -69,6 +72,4 @@ canvas.addEventListener("touchend", function(e) {
 
     let dataURL = canvas.toDataURL("image/png", 1.0);
     document.getElementById("signature").value = dataURL;
-
-    context.closePath();
 });
