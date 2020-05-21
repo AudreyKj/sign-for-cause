@@ -60,7 +60,6 @@ canvas.addEventListener("touchmove", function(e) {
     e.preventDefault();
     if (drawing == true) {
         context.lineTo(e.touches[0].clientX, e.touches[0].clientY);
-        context.lineTo(event.pageX, event.pageY);
         context.stroke();
         console.log("event.pageX", event.pageX);
         console.log("event.pageY", event.pageY);
