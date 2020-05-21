@@ -50,7 +50,6 @@ document.addEventListener("mouseup", function() {
 
 //mobile
 canvas.addEventListener("touchstart", function(e) {
-    e.preventDefault();
     drawing = true;
     context.moveTo(e.touches[0].clientX, e.touches[0].clientY);
     context.beginPath();
@@ -59,7 +58,6 @@ canvas.addEventListener("touchstart", function(e) {
 });
 
 canvas.addEventListener("touchmove", function(e) {
-    e.preventDefault();
     if (drawing == true) {
         context.lineTo(e.touches[0].clientX, e.touches[0].clientY);
         context.stroke();
@@ -67,7 +65,6 @@ canvas.addEventListener("touchmove", function(e) {
 });
 
 canvas.addEventListener("touchend", function(e) {
-    e.preventDefault();
     drawing = false;
 
     let dataURL = canvas.toDataURL("image/png", 1.0);
