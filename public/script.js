@@ -51,16 +51,15 @@ document.addEventListener("mouseup", function() {
 //mobile
 canvas.addEventListener("touchstart", function(e) {
     e.preventDefault();
-    console.log("event.pageX", event.pageX);
-    console.log("event.pageY", event.pageY);
     drawing = true;
-    context.moveTo(event.pageX, event.pageY);
+    context.moveTo(e.touches[0].clientX, e.touches[0].clientY);
     context.beginPath();
 });
 
 canvas.addEventListener("touchmove", function(e) {
+    e.preventDefault();
     if (drawing == true) {
-        //context.lineTo(e.touches[0].clientX, e.touches[0].clientY);
+        context.lineTo(e.touches[0].clientX, e.touches[0].clientY);
         context.lineTo(event.pageX, event.pageY);
         context.stroke();
         console.log("event.pageX", event.pageX);
