@@ -1,5 +1,5 @@
 const supertest = require("supertest");
-const { app } = require("./index");
+const { app } = require("./index.js");
 const cookieSession = require("cookie-session");
 
 test("POST /petition sets req.session.userId", () => {

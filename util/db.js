@@ -107,14 +107,6 @@ password=$4 WHERE id=$5`,
     );
 }
 
-function updateInfoNoPass(first, last, email, id) {
-    return db.query(
-        `UPDATE users SET first=$1, last=$2, email=$3
-WHERE id = $4`,
-        [first, last, email, id]
-    );
-}
-
 exports.addSigner = addSigner;
 exports.getSignature = getSignature;
 exports.getSigners = getSigners;
@@ -127,4 +119,3 @@ exports.getInfoForUpdate = getInfoForUpdate;
 exports.updateProfile = updateProfile;
 exports.updateInfoWithPass = updateInfoWithPass;
 exports.deleleSignature = deleleSignature;
-exports.updateInfoNoPass = updateInfoNoPass;

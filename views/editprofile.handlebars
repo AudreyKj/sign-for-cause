@@ -4,8 +4,9 @@
 
   <span class="update"> EDIT YOUR PROFILE  </span>
   {{#if error}}
-  <span class="error"> Error: please make sure the fields are filled in correctly! </span>
+  <span class="error"> Error: please make sure all fields are filled </span>
   {{/if}}
+
 
 <div class="profile-inputs">
   <label for="first"> FIRST NAME</label>
@@ -20,7 +21,7 @@
   <input class="profile-edit" type="text" name="email" minlength="4" value="{{email}}" autocomplete="off">
 
   <label for="password"> PASSWORD </label>
-  <input class="profile-edit" type="password" name="password" value="{{password}}" minlength="2" autocomplete="off" required>
+  <input class="profile-edit" type="password" name="password" minlength="5" value="{{password}}" autocomplete="off" required>
 </div>
 
 <div class="profile-inputs">

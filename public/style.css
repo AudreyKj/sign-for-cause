@@ -79,10 +79,15 @@ section {
     min-height: 100vh;
 }
 
-span.error {
+span.error,
+span.error-auth {
     text-align: center;
     color: #940c03;
     font-size: 1.2rem;
+}
+
+span.error {
+    margin-bottom: 10px;
 }
 
 form.login,
@@ -102,19 +107,19 @@ h1 {
     padding-top: 35px;
     color: transparent;
     -webkit-text-stroke: 1px #ffffffa1;
-    transition: color 0.5s;
 }
 
 h1:hover {
     color: #ffffffa1;
     -webkit-text-stroke: 1px transparent;
+    transition: color 0.5s;
 }
 
 h1.light {
     -webkit-text-stroke: 1px #333;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1300px) {
     h1 {
         font-size: 4rem;
     }
@@ -247,16 +252,47 @@ section.petition {
 }
 
 .logout {
+    border: 1px solid #ccc;
+}
+
+div.loggedIn-options {
     position: absolute;
-    bottom: 30px;
-    right: 20%;
-    border: none;
+    top: 25%;
+    width: 50%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1400px) {
+    div.loggedIn-options {
+        position: absolute;
+        top: 25%;
+        width: 100%;
+        height: 15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 900px) {
+    div.loggedIn-options {
+        position: absolute;
+        top: 25%;
+
+        width: 100%;
+        height: 15%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
 }
 
 .edit-profile-home {
-    position: absolute;
-    left: 19%;
-    bottom: 30px;
+    display: flex;
+    align-items: center;
+    margin-right: 25px;
 }
 
 /* LOGIN AND REGISTER */
@@ -483,13 +519,15 @@ li {
     padding-top: 12px;
     border-radius: 12px;
     margin-top: 30px;
-    margin-left: 35px;
     padding: 15px;
     color: #cccccc;
     border: 1px solid #ccc;
     font-size: 1rem;
     text-decoration: none;
     z-index: 1;
+    height: 3rem;
+    display: flex;
+    align-items: center;
 }
 
 div.options-signers {

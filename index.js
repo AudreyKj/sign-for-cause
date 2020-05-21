@@ -55,7 +55,7 @@ app.get("/petition", (req, res) => {
         });
     } else {
         res.render("petition", {
-            layout: "main"
+            loggedOut: "loggedOut"
         });
     }
 });
@@ -89,7 +89,6 @@ app.post("/petition", (req, res) => {
                     res.redirect("/profile");
                 })
                 .catch(err => {
-                    console.log("error", err);
                     res.render("petition", {
                         error: "error"
                     });
@@ -128,17 +127,13 @@ app.post("/login", (req, res) => {
                             .catch(err => {
                                 res.redirect("/sign");
                             });
-                    } else {
-                        res.render("login", { error: "error" });
                     }
                 })
                 .catch(err => {
-                    console.log("error", err);
                     res.render("login", { error: "error" });
                 });
         })
         .catch(err => {
-            console.log("error", err);
             res.render("login", { error: "error" });
         });
 });
@@ -280,43 +275,22 @@ app.post("/profile/edit", function(req, res) {
         req.body.website = null;
     }
 
-    if (password === "") {
-        db.updateInfoNoPass(first, last, email)
-            .then(result => {})
-            .then(() => {
-                db.updateProfile(age, city, req.body.website, id)
-                    .then(result => {
-                        res.redirect("/profile/updated");
-                    })
-                    .catch(err => {
-                        console.log("error", err);
-                        res.render("editprofile", { error: "error" });
-                    });
-            })
-            .catch(err => {
-                console.log("error", err);
-                res.render("editprofile", { error: "error" });
-            });
-    } else {
-        hash(password).then(hashedPw => {
-            password = hashedPw;
+    hash(password).then(hashedPw => {
+        password = hashedPw;
 
-            db.updateInfoWithPass(first, last, email, password, id).then(() => {
-                db.updateProfile(age, city, website, id)
-                    .then(result => {
-                        res.redirect("/profile/updated");
-                    })
-                    .catch(err => {
-                        console.log("error", err);
-                        res.render("editprofile", { error: "error" });
-                    })
-                    .catch(err => {
-                        console.log("error", err);
-                        res.render("editprofile", { error: "error" });
-                    });
-            });
+        db.updateInfoWithPass(first, last, email, password, id).then(() => {
+            db.updateProfile(age, city, website, id)
+                .then(result => {
+                    res.redirect("/profile/updated");
+                })
+                .catch(err => {
+                    res.render("editprofile", { error: "error" });
+                })
+                .catch(err => {
+                    res.render("editprofile", { error: "error" });
+                });
         });
-    }
+    });
 });
 
 app.get("/profile/updated", function(req, res) {
