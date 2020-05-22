@@ -27,11 +27,11 @@ The homepage features a customizable design where users can change its backgroun
 
 ## Visuals
 
-![screenshot](readMe/screenshot_2.png)
 ![screenshot](readMe/screenshot_1.png)
+![screenshot](readMe/screenshot_2.png)
 ![screenshot](readMe/screenshot_3.png)
 ![screenshot](readMe/screenshot_4.png)
 
 <p align="center">
-<img src="readMe/mobile.png" width="500" height="986">
+<img src="readMe/mobile.png" width="450" height="915">
 </p>
