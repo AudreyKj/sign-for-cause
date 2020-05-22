@@ -9,7 +9,7 @@ html {
 
 body {
     width: 100%;
-    background-color: rgba(117, 21, 6, 0.89);
+    background-color: rgb(34, 34, 34);
 
     border-radius: 50%;
     background-repeat: no-repeat;
@@ -127,7 +127,7 @@ h1 {
     padding-top: 35px;
     color: transparent;
     -webkit-text-stroke: 1px #ffffffa1;
-    cursor: url(/signed.png), auto;
+    cursor: url(/icon.png), auto;
 }
 
 h1:hover {

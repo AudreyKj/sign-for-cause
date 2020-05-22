@@ -4,25 +4,17 @@
   <span class="error"> Error: please make sure the fields are filled in correctly! </span>
   {{/if}}
 
-
     <form  class="profile" method="POST">
       <label for="age"> AGE </label>
-      <input type="text" name="age" minlength="2" placeholder="age" autocomplete="off" required />
+      <input type="text" name="age" minlength="2" placeholder="age" autocomplete="off" required>
 
       <label for="city"> CITY </label>
-      <input type="text" name="city" placeholder="city" minlength="2" autocomplete="off" required />
+      <input type="text" name="city" placeholder="city" minlength="2" autocomplete="off" required>
 
-      <label for="website"> WEBSITE OR SOCIAL MEDIA  <br> link starts with "http://" or "https://"
-      </label>
-      <input type="text" name="website" minlength="4" placeholder="website or social media link"
-      autocomplete="off">
+      <label for="website"> WEBSITE OR SOCIAL MEDIA  <br> link starts with "http://" or "https://"</label>
+      <input type="text" name="website" minlength="4" placeholder="website or social media link"autocomplete="off">
 
       <input type="hidden" name="_csrf" value="{{csrfToken}}">
       <button class="button"> SUBMIT  </button>
-
-</form>
-
-
-
-
-  </section>
+  </form>
+</section>

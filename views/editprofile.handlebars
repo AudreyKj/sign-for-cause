@@ -1,40 +1,35 @@
 <section>
 
-<form  class="update" method="POST">
+  <form  class="update" method="POST">
+    <span class="update"> EDIT YOUR PROFILE  </span>
+    {{#if error}}
+    <span class="error"> Error: please make sure all fields are filled </span>
+    {{/if}}
 
-  <span class="update"> EDIT YOUR PROFILE  </span>
-  {{#if error}}
-  <span class="error"> Error: please make sure all fields are filled </span>
-  {{/if}}
 
+    <label for="first"> FIRST NAME</label>
+    <input class="profile-edit" type="text" name="first" minlength="2" value="{{first}}" autocomplete="off">
 
-  <label for="first"> FIRST NAME</label>
-  <input class="profile-edit" type="text" name="first" minlength="2" value="{{first}}" autocomplete="off">
+      <label for="last"> LAST NAME</label>
+      <input class="profile-edit" type="text" name="last" value="{{last}}" minlength="2" autocomplete="off">
 
-  <label for="last"> LAST NAME</label>
-  <input class="profile-edit" type="text" name="last" value="{{last}}" minlength="2" autocomplete="off">
+      <label for="email"> EMAIL </label>
+      <input class="profile-edit" type="text" name="email" minlength="4" value="{{email}}" autocomplete="off">
 
-  <label for="email"> EMAIL </label>
-  <input class="profile-edit" type="text" name="email" minlength="4" value="{{email}}" autocomplete="off">
+      <label for="password"> PASSWORD </label>
+      <input class="profile-edit" type="password" name="password" minlength="5" value="{{password}}" autocomplete="off" required>
 
-  <label for="password"> PASSWORD </label>
-  <input class="profile-edit" type="password" name="password" minlength="5" value="{{password}}" autocomplete="off" required>
+      <label for="age"> AGE </label>
+      <input class="profile-edit" type="text" name="age" minlength="2" value="{{age}}" autocomplete="off">
 
-  <label for="age"> AGE </label>
-  <input class="profile-edit" type="text" name="age" minlength="2" value="{{age}}" autocomplete="off">
+      <label for="city"> CITY </label>
+      <input class="profile-edit" type="text" name="city" value="{{city}}" minlength="2" autocomplete="off">
 
-  <label for="city"> CITY </label>
-  <input class="profile-edit" type="text" name="city" value="{{city}}" minlength="2" autocomplete="off">
+      <label for="website"> WEBSITE OR SOCIAL MEDIA  <br> link starts with "http://" or "https://"</label>
+      <input type="text" name="website" minlength="4" value="{{website}}"autocomplete="off">
+      <input type="hidden" name="_csrf" value="{{csrfToken}}">
 
-  <label for="website"> WEBSITE OR SOCIAL MEDIA  <br> link starts with "http://" or "https://"
-  </label>
-  <input type="text" name="website" minlength="4" value="{{website}}"
-  autocomplete="off">
-
-  <input type="hidden" name="_csrf" value="{{csrfToken}}">
-
-<button class="button-thankyoupage"> UPDATE</button>
-
-</form>
+      <button class="button-thankyoupage"> UPDATE</button>
+  </form>
 
 </section>

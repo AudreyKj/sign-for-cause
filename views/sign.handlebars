@@ -2,24 +2,19 @@
 
   <span class="sign"> YOU HAVEN'T SIGNED YET </span>
 
-<form class="sign" method="POST">
-CHOOSE A COLOR FOR YOUR SIGNATURE AND SIGN BELOW
+  <form class="sign" method="POST">
+    CHOOSE A COLOR FOR YOUR SIGNATURE AND SIGN BELOW
 
-<div class="color-signature">
-<input id="signature-color" type="color" />
+    <div class="color-signature">
+    <input id="signature-color" type="color" />
 
-</div>
+    </div>
 
-<input type="hidden" name="signature" id="signature"/>
-
-  <canvas id="signature" width="390" height="500"></canvas>
-
-<input type="hidden" name="_csrf" value="{{csrfToken}}">
-
-<button class="button-thankyoupage"> SUBMIT </button>
-
-</form>
-
+    <input type="hidden" name="signature" id="signature">
+      <canvas id="signature" width="390" height="500"></canvas>
+      <input type="hidden" name="_csrf" value="{{csrfToken}}">
+      <button class="button-thankyoupage"> SUBMIT </button>
+  </form>
 
 </section>
 

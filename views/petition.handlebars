@@ -1,7 +1,7 @@
 <section class="petition">
   <div class="color">
     <span class="color-text"> change <br> color </span>
-  <input class="input-color" type="color">
+    <input class="input-color" type="color">
   </div>
 
 {{#if loggedOut}}
@@ -21,20 +21,15 @@
       <label for="last"> PASSWORD </label>
       <input type="password" name="password" placeholder="password" minlength="5" autocomplete="off"required>
       <input type="hidden" name="_csrf" value="{{csrfToken}}">
-
-    <button class="button auth-page"> SIGN UP  </button>
+      <button class="button auth-page"> SIGN UP  </button>
 </form>
 
 <span class="link-login-register"> IF YOU ARE ALREADY A MEMBER, PLEASE <a class="link" href="/login"> LOGIN </a></span>
-
 </section>
 {{/if}}
 
 {{#if loggedIn}}
 <div class="loggedIn-options">
-
-
-
   <a class="button edit-profile-home" href="/profile/edit"> EDIT PROFILE </a>
 
   <form action="/logout" method="post">
@@ -43,7 +38,6 @@
   </button>
   <input type="hidden" name="_csrf" value="{{csrfToken}}">
 </form>
-
 </div>
 {{/if}}
 
