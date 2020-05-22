@@ -46,6 +46,12 @@ footer {
     text-align: center;
 }
 
+@media (max-width: 500px) {
+    footer {
+        height: 60px;
+    }
+}
+
 span.footer-close {
     font-size: 2.5rem;
     cursor: pointer;

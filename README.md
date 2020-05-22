@@ -9,7 +9,7 @@ The homepage features a customizable design where users can change its backgroun
 
 ## Features
 
--   change background-color of page
+-   change background-color of homepage
 -   login/register
 -   create & update profile
 -   sign (using canvas)
