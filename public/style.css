@@ -39,8 +39,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: yellow;
-    color: #333;
+    background-color: blue;
     height: 50px;
     cursor: pointer;
     text-align: center;
