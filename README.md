@@ -1,6 +1,8 @@
 # sign-for-cause
 
-In this app, users can register/login, create a profile, sign for a cause and discover the full list
+App inspired by [change.org](https://www.change.org)<br />
+
+Users can register/login, create a profile, sign for a cause and discover the full list
 of signers. <br />
 
 The homepage features a customizable design where users can change its background color.
